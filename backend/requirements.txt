@@ -1,0 +1,37 @@
+# Enterprise AI Copilot - Backend Dependencies
+# Python 3.11+
+
+# ─── Web Framework ────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.17
+httpx==0.28.1
+
+# ─── Configuration ────────────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.7.0
+
+# ─── Vector Database (Qdrant) ─────────────────────────────────────────────────
+qdrant-client==1.12.1
+
+# ─── Embeddings (SentenceTransformers) ───────────────────────────────────────
+sentence-transformers==3.3.1
+torch==2.5.1          # CPU-only for local dev, use torch[cuda] for GPU
+transformers==4.47.1
+numpy==1.26.4
+
+# ─── ML Utilities ─────────────────────────────────────────────────────────────
+scikit-learn==1.5.2   # For PCA/t-SNE embedding visualization
+
+# ─── LangChain (optional — for advanced chain orchestration) ──────────────────
+langchain==0.3.12
+langchain-community==0.3.12
+
+# ─── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+aiofiles==24.1.0
+
+# ─── Testing ──────────────────────────────────────────────────────────────────
+pytest==8.3.4
+pytest-asyncio==0.25.0
+httpx==0.28.1  # For testing FastAPI endpoints
